@@ -1,10 +1,26 @@
 <ion-header>
-  <ion-toolbar color="secondary">
-   
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
+    <ion-navbar color="secondary">
+
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
+    <ion-item>
+        <ion_label floating>Username</ion_label>
+        <ion_input [(ngModel)]="profile.username"></ion_input>
+    </ion-item>
+
+    <ion-item>
+        <ion_label floating>Firstname</ion_label>
+        <ion_input [(ngModel)]="profile.firstname"></ion_input>
+    </ion-item>
+
+    <ion-item>
+        <ion_label floating>Lastname</ion_label>
+        <ion_input [(ngModel)]="profile.lastname"></ion_input>
+    </ion-item>
+
+    <button ion-button clear block (click)="crateProfile()">Create Profile</button>
 </ion-content>
